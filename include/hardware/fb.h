@@ -160,6 +160,8 @@ typedef struct framebuffer_device_t {
     int (*enableHDMIOutput) (struct framebuffer_device_t* dev, int);
     int (*setActionSafeWidthRatio) (struct framebuffer_device_t* dev, float);
     int (*setActionSafeHeightRatio) (struct framebuffer_device_t* dev, float);
+    int (*resetBufferPostStatus)(struct framebuffer_device_t* dev);
+    int (*waitForBufferPost) (struct framebuffer_device_t* dev);
 #else
     void* reserved_proc[6];
 #endif

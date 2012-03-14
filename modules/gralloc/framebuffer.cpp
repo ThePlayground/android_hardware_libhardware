@@ -171,7 +171,7 @@ int mapFrameBufferLocked(struct private_module_t* module)
     info.yoffset = 0;
     info.activate = FB_ACTIVATE_NOW;
 
-#if defined(NO_32BPP)
+#ifdef NO_32BPP
     /*
      * Explicitly request 5/6/5
      */
